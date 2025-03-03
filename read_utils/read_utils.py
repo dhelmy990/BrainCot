@@ -2,11 +2,13 @@ import arxiv
 import paperscraper
 import fitz
 import os
+import requests
 from openai import OpenAI
 from openai.types.beta.threads.message_create_params import (
     Attachment,
     AttachmentToolFileSearch,
 )
+import prompt
 import sys
 
 paper_id = "1312.6211"
@@ -32,16 +34,16 @@ def download_paper(paper_id):
 def get_images(doc):
     for page_number, page in enumerate(doc):
         for index, img in enumerate(page.get_images(full=True)): 
-            named = f"image_{page_number + 1}_{index}.png"
+            named = f"{page_number + 1}_{index}.png"
             pix = fitz.Pixmap(doc, img[0])  # Get image
             if pix.n < 5:  # Not CMYK
                 pix.save(named)
             else:  # Convert CMYK to RGB
                 fitz.Pixmap(fitz.csRGB, pix).save(named)
 
-def extract(paper_id : str):
+def preextract(paper_id : str):
     """
-        Performs all necessary extraction operations. 
+        Downloads the pdf and gets the images. 
         Later on I plan to make it possible to skip the download phase should it exist.
     """
     pdf_path = download_paper(paper_id)
@@ -55,12 +57,27 @@ def extract(paper_id : str):
     os.chdir("./downloads/" + paper_id)
     get_images(doc)
     os.chdir("../..")
+    return doc
+
+def main():
+    text = preextract(paper_id)
 
 
+# Example usage
+
+""" 
+api_key = "your-api-key"
+file_path = "path/to/research_paper.pdf"
+summary, key_terms = getGPTresponse(api_key, file_path)
+
+print("Summary:\n", summary)
+print("\nKey Terms:\n", key_terms)
+
+"""
 
 
 # Example Usage
-text = extract(paper_id)
+
     
 
 print("Full text extracted!")
