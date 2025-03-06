@@ -1,4 +1,3 @@
-from resp.resp.apis.arxiv_api import Arxiv
 from core_secret import API_KEY
 import requests
 import pprint
@@ -18,18 +17,19 @@ def find(keywords : list):
     headers = {"Authorization": f"Bearer {API_KEY}"}
     response = requests.get(url, headers=headers)
 
-    final_answer = []
-    for i in range(RETRIES_ALLOWED)
+
+    final_answer = deque()
+    for i in range(RETRIES_ALLOWED):
         if response.status_code == 200:
             papers = response.json()["results"]
             for index, paper in enumerate(papers):
-                if paper['download_url'] is not None:
-                    deque.append(paper)
+                if paper['downloadUrl'] is not None:
+                    final_answer.append(paper)
             break
         else:
             print("Error:", response.json())
     
-    return deque
+    return final_answer
 
-find(["machine learning", "neuroscience", "brain-computer interface"])
+#find(["machine learning", "neuroscience", "brain-computer interface"])
 

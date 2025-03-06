@@ -2,8 +2,9 @@ import arxiv
 import fitz
 import os
 import requests
-import prompt
+from . import prompt
 import sys
+from time import sleep
 
 paper_id = "1312.6211"
 
@@ -23,8 +24,6 @@ def download_paper(paper_id, download_url):
         Attempt to download paper. Return None if paper fails to be downloaded. 
         Else return path to paper.
     """
-
-
 
     dir_path = os.path.join("./downloads/", paper_id)
     os.makedirs(dir_path, exist_ok=True)
@@ -59,30 +58,30 @@ def preextract(paper : dict):
         Downloads the pdf and gets the images. 
         Later on I plan to make it possible to skip the download phase should it exist.
     """
+
+
     pdf_path = download_paper(paper["title"], paper["downloadUrl"])
     if pdf_path is None: 
         raise OSError("""Diego says: For whatever reason I could not get this file. 
                       Just catch this error, and don't offer this as an optional next scroll.""")
-
+    sleep(1)
 
     #open doc, enter the directory, download images, exit the directory
     doc = fitz.open(pdf_path)
+    
     os.chdir("./downloads/" + paper["title"])
     get_images(doc)
+    with open('extract.txt', 'w') as file:
+        file.write(paper["fullText"])
     os.chdir("../..")
-    return doc
+    return pdf_path
 
 def main():
     text = preextract({"title" : "JNEEG shield for Jetson Nano for real-time EEG signal processing with deep learning", "downloadUrl" : "http://arxiv.org/abs/2405.09575"})
 
-
-
 # Example Usage
+#print("Full text extracted!")
 
-main()
-
-print("Full text extracted!")
-#print(text)
 
 
 

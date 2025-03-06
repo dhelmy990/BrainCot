@@ -1,0 +1,940 @@
+Behavioral/Systems/Cognitive
+Multiple Parietal Reach Regions in Humans: Cortical
+Representations for Visual and Proprioceptive Feedback
+during On-Line Reaching
+Flavia Filimon,1,3 Jonathan D. Nelson,2,3,4 Ruey-Song Huang,1 andMartin I. Sereno1,5,6
+Departments of 1Cognitive Science and 2Computer Science and Engineering, University of California, San Diego, La Jolla, California 92093, 3Max Planck
+Institute for Human Development, 14195 Berlin, Germany, 4Computational Neurobiology Laboratory, Salk Institute for Biological Studies, La Jolla,
+California 92037, 5School of Psychology, Birkbeck College, LondonWC1E 7HX, United Kingdom, and 6Birkbeck/University College London Neuroimaging
+Centre, LondonWC1H 0AP, United Kingdom
+Reaching toward a visual target involves at least two sources of information. One is the visual feedback from the hand as it approaches the
+target. Another is proprioception from the moving limb, which informs the brain of the location of the hand relative to the target even
+when the hand is not visible. Where these two sources of information are represented in the human brain is unknown. In the present
+study, we investigated the cortical representations for reaching with or without visual feedback from themoving hand, using functional
+magnetic resonance imaging. To identify reach-dominant areas, we compared reaching with saccades. Our results show that a reach-
+dominant region in the anterior precuneus (aPCu), extending into medial intraparietal sulcus, is equally active in visual and nonvisual
+reaching. A second region, at the superior end of the parieto-occipital sulcus (sPOS), ismore active for visual than for nonvisual reaching.
+These results suggest that aPCu is a sensorimotor area whose sensory input is primarily proprioceptive, while sPOS is a visuomotor area
+that receives visual feedback during reaching. In addition to the precuneus, medial, anterior intraparietal, and superior parietal cortex
+were also activated during both visual and nonvisual reaching, with more anterior areas responding to handmovements only andmore
+posterior areas responding to both hand and eye movements. Our results suggest that cortical networks for reaching are differentially
+activated depending on the sensory conditions during reaching. This indicates the involvement of multiple parietal reach regions in
+humans, rather than a single homogenous parietal reach region.
+Introduction
+The parietal lobe contains sensorimotor representations that use
+sensory input, e.g., vision, to guide interactions with the environ-
+ment, e.g., reaching to a target. Whereas macaque neurophysiol-
+ogy has revealed parietal regions that use various sensory repre-
+sentations (visual, somatosensory) to guidemultiple actions (eye,
+limb, head movements), the human homologs of those sensori-
+motor representations remain unclear (Culham et al., 2006),
+both in terms of effector specificity of themotor component (e.g.,
+hand vs eye) and in terms of the sensory input driving the action
+(vision or somatosensation). For instance, both visual and pro-
+prioceptive feedback from the limb can guide on-line reaching.
+How these two sources of information map onto human parietal
+reach regions is unknown.
+In macaques, several medial posterior parietal areas contain
+neurons that respond more during reaching than saccades, in-
+cluding area 5, V6A, andMIP, which partly overlaps the “parietal
+reach region” (PRR) (Kalaska, 1996; Fattori et al., 2001; Andersen
+and Buneo, 2002; Galletti et al., 2003).
+Human functional neuroimaging has yielded inconclusive re-
+sults on the human homolog(s) of macaque parietal reach re-
+gions, perhaps because most studies have used pointing prepara-
+tion rather than actual reaching (Connolly et al., 2000, 2003;
+Astafiev et al., 2003; Fernandez-Ruiz et al., 2007; Hagler et al.,
+2007). Finger pointing is a much smaller movement than reach-
+ing, which may not recruit areas controlling the arm. In natural
+reaching, hands are not preshaped into a fist with the index finger
+extended, which ismore typical of communicative gestures (Cul-
+ham and Valyear, 2006; Culham et al., 2006). Reaching to point
+(with the index finger) (Prado et al., 2005), reaching to grasp
+(Grafton et al., 1996; Culham et al., 2008), and reaching to touch
+(Pellijeff et al., 2006; Levy et al., 2007; Culham et al., 2008) acti-
+vate medial parietal cortex, although various locations and acti-
+vationmagnitudes (relative to saccades) have been reported. Im-
+portantly, various precuneus regions, including anterior
+precuneus (aPCu) and superior parieto-occipital sulcus (sPOS),
+have been labeled “human PRR.”
+Recently, execution of visually guided reaching without
+touching, pointing, or grasping was shown to activate the entire
+superior extent of the precuneus, from the POS to the cingulate
+Received July 8, 2008; revised Jan. 16, 2009; accepted Jan. 26, 2009.
+This work was funded by National Science Foundation (NSF) Grant BCS 0224321 toM.I.S. and by NSF Integrative
+Graduate Education and Research Traineeship Program Grant DGE-0333451 to G. W. Cottrell and V. R. de Sa. We
+thank the University of California, San Diego fMRI Center, in particular, Giedrius T. Buracas, for technical support.We
+thank E. Todorov, G. Boynton, and J. Stiles for feedback on this manuscript and D. J. Hagler, Jr., for providing the
+original code for clustering and averaging.
+Correspondence should be addressed to Flavia Filimon, Max Planck Institute for Human Development, Ko¨nigin-
+Luise-Strasse 5, 14195 Berlin, Germany. E-mail: ffilimon@cogsci.ucsd.edu.
+DOI:10.1523/JNEUROSCI.3211-08.2009
+Copyright © 2009 Society for Neuroscience 0270-6474/09/292961-11$15.00/0
+The Journal of Neuroscience, March 4, 2009 • 29(9):2961–2971 • 2961
+sulcus (Filimonet al., 2007).Does theprecu-
+neus map visual input from the hand, or
+proprioceptive feedback,duringmovement?
+To investigate the medial parietal rep-
+resentations of visual versus propriocep-
+tive feedback during reaching, we com-
+pared reaching with the hand visible and
+nonvisible. Whereas visual reaching in-
+volves both visual feedback and proprio-
+ception, nonvisual reaching requires on-
+line monitoring of proprioceptive
+feedback during the transport phase. This
+information is used to calculate where the
+hand is in space, relative to the target,
+without vision. Parietal reach-related re-
+gions exhibiting increased activation dur-
+ing visible compared with nonvisible
+reaches would reveal modulation from vi-
+sual feedback. Parietal regions involved in
+on-line reaching that are not modulated
+by visual feedback would suggest proprio-
+ceptive input. Subjects used nondelayed
+(immediately executed), direct (without-
+a-mirror) reaching (involving the forearm
+and an open hand) toward external pe-
+ripheral targets. To identify reach-
+dominant areas, we also contrasted reach-
+ing with saccades. Given previous
+descriptions of multiple precuneus foci as
+human PRR, we examined how
+proprioceptive-only versus visual-and-
+proprioceptive arm feedback modulates
+precuneus activations.
+Results show that aPCu is activated
+equally whether or not the reaching hand
+is seen, whereas superior POS responds
+more during visual reaching. This suggests
+that aPCu is predominantly propriocep-
+tive–motor and sPOS is predominantly
+visuomotor.
+Materials andMethods
+Subjects. Eight subjects (4 males and 4 females,
+age range 21–33) participated in this experi-
+ment. All subjects were neurologically intact
+and right handed, andhadnormal or corrected-
+to-normal vision. All subjects gave written in-
+formed consent. The experimental procedures
+were approved by the University of California,
+San Diego Institutional Review Board.
+Stimuli. Stimuli were fiber-optic targets mounted on a custom-made
+black screen (for a schematic, see Fig. 1a). The fixation point and each
+target consisted of the endpoint of a single optical fiber. The other end of
+each optical fiber (located outside the scanner room) was illuminated by
+a dim light-emitting diode (LED) controlled by a custom-made circuit
+board designed by R.-S.H. (see Huang and Sereno, 2008). Only one of
+five possible targets was illuminated at one time. The screen was
+mounted 35 cm in front of the subject, with the subject’s head tilted
+forward for a direct view. The fiber-optic targets were arranged horizon-
+tally7° apart and7° below a fiber-optic fixation point, with the total
+display subtending35°. All other sources of light inside the scanner room
+were turned off or covered up. The fiber-optic lightswere dimmed such that
+a hand movement executed below each target was not visible to a subject
+inside the scanner. Each of the fiber-optic targets was turned on at random
+using a custom-made program on a Shuttle PC running RedHat Linux.
+Experimental task. Subjects were instructed to (1) reach to targets in
+the periphery while maintaining central fixation, (2) saccade, or (3) fix-
+ate. The targets were very dim fiber-optic points located horizontally
+below the fixation point (Fig. 1a). This was necessary to allow for reach-
+ing to just below each target, such that the hand would not obstruct the
+visual target or fixation point and thereby provide visual feedback as to its
+location. Subjects were instructed not to touch the screen. Reaching was
+done either in darkness, with no visual feedback from the hand (nonvi-
+sual direct reach), or in light, for which a bundle of optical fibers attached
+to the scanner bore above the subject’s chest was turned on. A bright LED
+located inside the console room illuminated the bundle of optical fibers.
+The light illuminated the subject’s hand during the reach, thus providing
+visual feedback (visual direct reach). Both kinds of reaching were exe-
+cuted directly toward the screen, in the same plane. Reaches were exe-
+cuted immediately, without delay. A pseudorandomblock order of visual
+Figure 1. Stimuli and experimental design. A, Three reach and three saccade trials illustrating example target presentation in
+the experiment, out of a total of five possible target locations. The fixation point is indicated in red. A random order of blocks of
+visual reach (vR), nonvisual reach (nvR), fixate (F), and saccade (S) trials was used. B, Subject positioning inside the scanner.
+Subjects lay supinewith thehead tilted forward for a direct viewof the screen. Subjectsmoved thehanddirectly toward the screen
+while fixating in the center.
+2962 • J. Neurosci., March 4, 2009 • 29(9):2961–2971 Filimon et al. • Visual and Proprioceptive Reaching Representations
+direct reach, nonvisual direct reach, saccade, and fixation trials was used.
+Each block of trials lasted 30 s, with each reach trial lasting 4 s, and each
+saccade trial lasting 2 s. A 2 s auditory message at the beginning of the
+block indicated which condition was about to begin. Each functional run
+consisted of 20 blocks total.
+Magnetic resonance image data acquisition.Magnetic resonance images
+were collected on a GE 3T scanner at the Center for fMRI, University of
+California, San Diego, using an eight-channel head coil. Functional im-
+ages were collected using an echoplanar T2* gradient echo pulse se-
+quence [32 contiguous axial slices, 3.44 3.44 4 mm voxel size, 64
+64 matrix, repetition time (TR)  2000 ms, 300 TRs (volumes) per
+functional scan, echo time 30 ms, flip angle 90°, bandwidth 62.5
+kHz]. The slice volume included the whole brain. The first four volumes
+in each scan series were discarded automatically, to allow the magnetiza-
+tion to reach a steady state. At least three functional scans (runs) were
+acquired per subject. In addition, a T1-weighted fast spoiled gradient-
+echo (FSPGR) alignment scan (1 1 1.3 mm voxel) was collected in
+each scanning session to align the functional images to a previously ob-
+tained high-resolution (1 1 1 mm) T1-weighted FSPGR anatomical
+scan. To prevent head motion, each subject’s head was stabilized using
+individual dental impressions (bite bars) supported by a four-ball-joint
+yoke. In addition, foamwas packed around the head inside the head coil,
+and the upper arm was immobilized with foam pads.
+Functional magnetic resonance imaging data analysis. Functional mag-
+netic resonance imaging (fMRI) data were analyzed using FreeSurfer
+(Fischl et al., 1999a, Dale et al., 1999) and AFNI (Cox, 1996) (for detailed
+procedures, see Filimon et al., 2007). Each subject’s cortical surface was
+reconstructed from the separately obtained high-resolution T1-weighted
+anatomical scan using FreeSurfer. Functional images were superimposed
+on the T1-weighted alignment scan collected during the functional ses-
+sion and then registered with the high-resolution anatomical scan from
+which the cortical surface was reconstructed. This allowed functional
+activations to be painted onto each subject’s reconstructed cortical sur-
+face. Functional runs were concatenated using AFNI’s 3dTcat function.
+Slice-timing correction was implemented using AFNI’s tshift function.
+Motion correction was implemented using AFNI’s volreg (volume reg-
+istration) function, registering images to the middle TR of the middle
+functional run. In five subjects there was a small amount of residual
+whole-head motion resulting in “spikes” in the raw signal time series
+which could not be corrected during volume registration (volreg). The
+TRs affected by head motion artifact were removed from the raw data
+using AFNI’s censor function. On average, 4.22% of reach TRs and
+4.24% of saccade TRs were excluded from those five subjects’ data to
+removemotion artifact. The percentage of TRs (brain volumes) removed
+per reach, saccade, and rest (fixation) conditions to eliminate motion
+artifact, were as follows: subject 1: 1.83% (reach), 1% (saccade), 1.67%
+(rest); subject 2: 3.78% (reach), 2.22% (saccade), 9.33% (rest); subject 3:
+7.67% (reach), 1.67% (saccade), 7.67% (rest); subject 4: 1% (reach), 0%
+(saccade), 2.67% (rest); subject 5: 6.83% (reach), 16.33% (saccade), 10%
+(rest). Subject 5 was the only subject with more head motion during the
+saccade condition compared with the reach condition. Since the activa-
+tion pattern for each condition was the same as in other subjects even
+after removing the noisy TRs, subject 5 was still included in group anal-
+yses. The pattern of activation was not different between these five sub-
+jects and the remaining subjects, suggesting that motion artifact was
+successfully removed.
+Blood oxygenation level-dependent (BOLD) responses to each exper-
+imental condition were analyzed using AFNI’s 3dDeconvolve (Cox,
+1996; Ward, 2000) general linear model (multiple regression), with a
+regressor of interest for each condition. A quadratic polynomial was used
+to fit the baseline. The 6 motion parameters obtained from volume reg-
+istration were included as regressors in the baseline model to account for
+variance due to motion. Hemodynamic responses were modeled at six
+different lag times (1, 2, 3, 4, 5, and 6 TRs). Correlation coefficients and
+F-statistics were generated for the area under the hemodynamic response
+function. Visual reach, nonvisual reach, and saccade were each con-
+trasted with the fixation baseline, as well as with each other (visual reach
+vs saccade; nonvisual reach vs saccade, visual reach vs nonvisual reach).
+Group analysis. Each subject’s reconstructed cortical surface was
+sphered and registered to an average spherical surface atlas in FreeSurfer
+using a best-fit sulcal alignment (Fischl et al., 1999b). Each subject’s
+coefficients and F-statistics were interpolated onto the average spherical
+surface after using 16 steps of surface-based smoothing, equivalent to a
+full-width, half-max (FWHM) Gaussian filter of 5 mm (Hagler et al.,
+2006). Activations were averaged across subjects in this spherical coordi-
+nate system. A one-way, repeated-measures ANOVA was performed for
+each voxel on the whole brain using AFNI’s mixed-effects, two-factor
+3dANOVA2, to generate means and F-statistics of activations for each
+condition versus baseline (visual direct reach, nonvisual direct reach, and
+saccade), and for pairwise comparisons. Condition was a fixed effect
+(with three levels), while subject was a random effect. Averaged activa-
+tions and F-statistics were resampled back onto an individual subject’s
+inflated cortical surface for display purposes. To correct for multiple
+comparisons, we used surface-based clustering (Hagler et al., 2006).
+Clusters of contiguous vertices were identified for t-statistics thresholded
+at p  0.05 for the group-averaged data and p  0.001 for individual
+subjects.
+Region of interest analysis. We defined parietal regions of interest
+(ROIs) within each subject based on both anatomical and functional
+criteria. ROIs consisted of contiguous voxels located on the medial pari-
+etal surface, between the POS and the cingulate sulcus.Within themedial
+parietal surface, voxels were identified that were active in the visual reach
+versus baseline comparison, since (1) the aim was to identify medial
+parietal regions activated by reaching, and compare reach-related and
+saccade-related activations within such areas; (2) visual reaching yielded
+the greatest extent of reach-related activations; and (3) a separate aimwas
+to see whether nonvisual reach activations and visual reach activations
+differed within such areas (e.g., to identify whether nonvisual reach ac-
+tivations might be weaker or less extended compared with visual reach
+activations). Only contiguous voxels significant within each subject at
+p 0.005, corrected, were included. This yielded an anterior precuneus
+region of interest. Each subject’s data set was divided in two, with ROIs
+identified in one half of the data, and percent signal change and time
+series analyses performed on the other half.
+An additional region of interest was identified based on the pattern of
+activations for visual and nonvisual reaching compared with saccades
+around the POS. The region was situated in-between the superior end of
+the POS and the subparietal sulcus. These anatomical criteria were used
+in addition to the same functional criteria as above to define an sPOS
+region of interest in half the data, with calculations performed as noted
+above on the other half of the data. The POS ROI became disconnected
+from the anterior precuneus ROI at higher thresholds ( p  0.005, cor-
+rected), suggesting the presence of two separate areas. ROIs were saved as
+surface patches in FreeSurfer. Voxels within each patch were normalized
+by their mean intensity and averaged within the ROI using MATLAB.
+Percent signal change coefficients were calculated for each condition
+from the normalized time series within the ROI.
+Results
+Figure 1 shows the experimental setup for the experiment. Note
+that “visually guided reaching” could refer either to reaching
+guided by a visual target or to reaching with the hand visible.
+Here, we refer to reaching with the hand visible as “visual reach-
+ing” and to reaching with the hand nonvisible as “nonvisual
+reaching.”Moreover, since reacheswere executed directly toward
+the peripheral visual targets, we refer to this as “direct” reaching
+(as opposed to, e.g., indirect reaches toward hidden targets). In
+the present experiment, subjects executed visual and nonvisual
+direct reaches or saccades to peripheral visual targets in front of
+them. Subjects reached from below toward the dim targets, with-
+out moving the hand on top of the targets, so that no visual
+feedback could be gained from obstructing the light source. All
+subjects confirmed that they could not see their hand in the non-
+visual condition. During the visual reach condition, a bright
+fiber-optic light taped to the ceiling of the scanner bore illumi-
+nated the subject’s moving hand. This allowed for a direct com-
+Filimon et al. • Visual and Proprioceptive Reaching Representations J. Neurosci., March 4, 2009 • 29(9):2961–2971 • 2963
+parison of visual direct reachingwith nonvisual direct reaching to
+the same targets, in the same reach plane. Central fixation was
+maintained during both visual and nonvisual reaching. All
+reaches were executed immediately, without a delay.
+Figure 2 shows group-average activations ( p  0.05, cor-
+rected) for visual direct reaching, nonvisual direct reaching, and
+saccades, versus fixation. Both kinds of reaching elicited a very
+similar pattern of frontoparietal activations compared with base-
+line, including dorsal and ventral premotor, supplementary mo-
+tor, primary somatomotor, cingulate, intraparietal, superior pa-
+rietal, and medial parietal cortical activations. Activations were
+bilateral but stronger in the left hemisphere, with primary so-
+matomotor activations entirely left lateralized, as expected for
+right-handed subjects moving their right hand only.
+As shown in Figure 2, both visual and nonvisual reaching
+strongly activated the precuneus (medial parietal cortex) bilater-
+ally, from the posterior end of the cingulate sulcus through to the
+POS, continuing into the cuneus. The superior aspect of the POS
+was activated more strongly by visual reaching than by nonvisual
+reaching.
+Saccades activated a frontoparietal network of brain regions
+that partly overlapped with reaching activations (Fig. 2, bottom
+row). Saccade activations were bilateral and included the frontal
+and supplementary eye fields (superior frontal sulcus/gyrus), the
+inferior precentral sulcus/gyrus, the intraparietal sulcus (IPS)
+and superior parietal gyrus (parietal eye fields), and the occipital
+cortex, including V1, the cuneus, lingual gyrus, and superior oc-
+cipital gyrus. The precuneus was only weakly activated by sac-
+cades, bilaterally.
+Both visual reaching and saccades strongly activated area V1
+(calcarine sulcus), the lingual gyrus, precuneus, and the lateral
+and superior occipital gyri, due to visual stimulation from the
+hand during reaching, and due to foveation of targets during
+saccades (Fig. 2, top and bottom rows). Occipital activations dur-
+ing nonvisual reaching were greatly reduced compared with vi-
+sual reaching or saccades, and did not extend into the calcarine
+sulcus or lingual gyrus (Fig. 2, middle row). Some occipital acti-
+vation during nonvisual reaching was expected, as the peripheral
+fiber-optic targets provided visual stimulation even when the
+hand did not. A posterior region of the lateral occipital gyrus,
+Figure 2. BOLD activations for visual direct reaching, nonvisual direct reaching, and saccades. Group surface-averaged activations (n 8) for visual and nonvisual direct reaching and saccades,
+versus baseline, are shown on dorsal, medial, and posterior views of the left and right inflated cortical hemispheres. Note the similarity in activation between visual and nonvisual direct reaching in
+thegreen-circled anterior precuneus region (medial view). Saccade activations in the sameanterior precuneus ROI aremuchweaker. Visual direct reaching also activates the sPOSmore strongly than
+saccades or nonvisual direct reaching (see arrows and small purple-blue circle). Sulci are marked with a dashed green line. CS, Central sulcus; L, left; R, right.
+2964 • J. Neurosci., March 4, 2009 • 29(9):2961–2971 Filimon et al. • Visual and Proprioceptive Reaching Representations
+includingMT (Fig. 2, dorsal and posterior views) was activated
+during nonvisual reaching as well as during visual reaching, con-
+sistent with tactile input to parts of MT (MST) (Beauchamp et
+al., 2007); part of this region may also represent the extrastriate
+body area, which responds to hand movement (Astafiev et al.,
+2004).
+To identify reach-dominant areas, we subtracted saccade-
+related activations from visual direct and nonvisual direct reach-
+ing activations (Fig. 3a, top and middle rows).
+Our hypothesis was that a possible human homolog of the
+macaque parietal reach region, located on the medial surface of
+the parietal lobe, would also be more active during visual and
+nonvisual reaching than during saccades. Indeed, visual direct
+reaching activated the anterior part of the precuneus (circled in
+green) and the superior POS (circled in purple-blue) significantly
+more strongly than saccades, bilaterally (Fig. 3a, top row) ( p 
+0.05, corrected). Nonvisual direct reaching also activated the an-
+terior part of the precuneus significantly more than saccades, but
+showed no difference in activation in the superior POS, bilater-
+ally (Fig. 3a, middle row, central panel). Analysis of more strin-
+gent thresholds ( p 0.001; data not shown) revealed that ante-
+rior precuneus activations for nonvisual reaching versus saccades
+were stronger in the left hemisphere than the right; i.e., contralat-
+eral to the moving hand.
+In addition to the anterior precuneus, other areas more
+strongly activated by both visual reaching and nonvisual reaching
+than by saccades included the anterior intraparietal sulcus (puta-
+tive AIP), the supramarginal gyrus, medial intraparietal sulcus
+(putative MIP), and superior parietal gyrus in the posterior pari-
+etal lobe, as well as dorsal premotor cortex, primary somatosen-
+sory and primary motor cortex (precentral and postcentral gyri),
+and supplementary motor cortex (Fig. 3a, top and middle rows),
+with activations stronger or lateralized to the left hemisphere.
+Visual reaching also activated the occipital lobe and middle oc-
+cipital cortex (MT) more than saccades bilaterally. Saccades
+activated the left occipital pole and right occipital lobemore than
+nonvisual reaching, confirming that subjects did not have visual
+input from the hand during nonvisual reaching and did not fo-
+veate the targets during reaching. Saccades activated the left and
+right inferior central sulcus (eye representation)more than either
+type of reaching.
+To identify parietal areas modulated by visual feedback from
+the hand during reaching, we compared visual reaching with
+nonvisual reaching (Fig. 3a, bottom row). This comparison re-
+vealed significantly stronger activations ( p 0.05, corrected) for
+visual reaching than nonvisual reaching around the sPOS, at the
+parieto-occipital junction, bilaterally. In contrast, the anterior
+precuneus and the rest of the parietal lobe did not differ signifi-
+cantly in activation between visual and nonvisual reaching. To
+confirm that our statistical correction was not overly stringent,
+we also compared visual andnonvisual reaching activations at the
+uncorrected 0.05 level, which still yielded no difference in the
+anterior precuneus. The sPOS activation also extended more an-
+teriorly into the posteromedial aspect of the IPS; however, this
+anterior activation did not survive p 0.01. Since that regionwas
+activated equally for saccades when comparing both visual reach
+versus saccades and nonvisual reach versus saccades, it likely rep-
+resents an effector-independent visual representation of visual
+stimuli (whether a hand or other stimulus).
+In addition to sPOS, visual and nonvisual reaching activations
+(Fig. 3a, bottom row) differed in the occipital lobe, with the cu-
+neus, calcarine sulcus, lingual gyrus, and superior and lateral oc-
+cipital gyri (includingMT) being significantlymore active dur-
+ing visual direct reaching than during nonvisual direct reaching
+( p  0.05, corrected). This is consistent with the greater visual
+stimulation provided by the visual reach than the nonvisual
+reach.
+Figure 3a thus suggests that on the medial parietal wall, two
+areas contribute differentially to reaching: the anterior precuneus
+participates equally in visual and nonvisual reaching. We denote
+this region as the anterior precuneus reach region, or “aPCu” in
+short. In contrast, an area at the superior aspect of the parieto-
+occipital sulcus, or sPOS, was more strongly activated by visual
+reaching than by either saccades or nonvisual reaching.
+Figure 3b shows the time course of activity and percent signal
+change in the left anterior precuneus across all three conditions.
+Percent signal change in BOLD signals for visual and nonvisual
+reaching in aPCu did not differ significantly (t(7)  0.44, n.s.).
+The magnitude of BOLD signal change in aPCu was significantly
+less for saccades than either for visual reaching (t(7) 6.98, two-
+tailed p  0.0004) or for nonvisual reaching (t(7)  3.61, two-
+tailed p 0.01).
+Figure 3c shows the percent signal change in the left sPOS for
+visual and nonvisual reaching and for saccades. Percent signal
+change in BOLD signals in the left sPOS was significantly greater
+for visual reaching than for nonvisual reaching (t(7) 3.34, two-
+tailed p 0.01) and than for saccades (t(7) 3.71, two-tailed p
+0.004). Nonvisual reaching and saccade percent signal change did
+not differ in the left sPOS (t(7)  1.41, n.s.). This pattern is
+consistent with sPOS having a largely visuomotor role, and aPCu
+a predominantly proprioceptive–motor role, in reaching. Table 1
+shows the average x, y, z coordinates for the two ROIs.
+To more closely examine the difference between the various
+parietal areas activated more strongly by both kinds of reaching
+than by saccades, and their relationship to the anterior precu-
+neus, we implemented a conjunction analysis in AFNI. As can be
+seen from Figure 2, the aPCu is strongly activated by both visual
+and nonvisual reaching, and is weakly (but significantly, at p 
+0.05) activated by saccades. Figure 3, a and b, showed that aPCu is
+equally activated by visual and nonvisual reaching. To search for
+any other areas that behave similarly, we used a whole-brain con-
+junction analysis to identify voxels satisfying of all of these crite-
+ria: (1) the voxel is activated by visual reach, nonvisual reach, and
+saccade, above baseline at p 0.05; AND (2) the voxel is signifi-
+cantly more active in both visual reach versus saccade and non-
+visual reach versus saccade ( p  0.05); i.e., visual reach  sac-
+cade  0; AND nonvisual reach  saccade 0; AND (3) visual
+reach nonvisual reach 0 ( p 0.05, n.s.).
+Figure 4a shows the result of this conjunction on an inflated
+left hemisphere (contralateral to the moving hand), with voxels
+satisfying all three criteria shown in yellow. As expected, an area
+located in the anterior precuneus (medial parietal cortex) and
+overlapping with the aPCu activations shown in Figures 2 and 3a,
+satisfies these criteria. Interestingly, the anterior precuneus acti-
+vations are joined to a posterior parietal area in the medial in-
+traparietal sulcus (medial IPS, or mIPS), which extends to the
+superior (dorsal) aspect of posterior parietal cortex. This area
+might correspond tomacaqueMIP,which has also been shown to
+be involved in reaching in macaques. In addition to aPCu and
+medial IPS, dorsal premotor cortex (superior frontal gyrus) and
+the supplementarymotor cortex (SMA) also satisfy these criteria.
+This is expected, since parietofrontal circuits underlie reaching in
+the macaque, with both parietal and premotor areas contribut-
+ing. Thus, it appears that within posterior parietal cortex, only
+medial IPS and aPCu participate in all three conditions, with
+greater activation to visual and nonvisual reaching than to sac-
+Filimon et al. • Visual and Proprioceptive Reaching Representations J. Neurosci., March 4, 2009 • 29(9):2961–2971 • 2965
+2966 • J. Neurosci., March 4, 2009 • 29(9):2961–2971 Filimon et al. • Visual and Proprioceptive Reaching Representations
+cades, and equal involvement in visual and nonvisual reaching.
+Notice the dip in the V-like activation pattern: the bottom of the
+V lies on the crest of the inflated surface and thereby separates the
+medial (precuneus) activation from the dorsal (mIPS) activation
+(Fig. 4a).
+Figure 4b shows multiple conjunctions overlaid on the in-
+flated left hemisphere. In green, only voxels are shown that are
+strongly activated by both visual and nonvisual reaching ( p 
+0.01) but not by saccades. As can be seen in Figure 4b, parietal
+voxels activated only by reaching and not by saccades are anterior
+as well as lateral to the aPCu and mIPS activations identified by
+the conjunction in Figure 4a. From amedial view (Fig. 4b, middle
+panel), most of these voxels fall inside the posterior end of the
+cingulate sulcus, extending dorsally onto the very anterior aspect
+of the superior parietal gyrus. This location is consistent with
+what in the macaque would be called area 5 (Cavada, 2001),
+which mostly responds during hand movements but not during
+saccades, consistent with our analysis. The more anterior IPS
+activations (green) lateral of the yellow cluster might correspond
+(at least in anatomical location) to macaque areas 7a and AIP,
+also involved in hand movements (Andersen and Buneo, 2002).
+Voxelsmore anterior than the anterior IPS fall inside the primary
+somatosensory cortex (postcentral gyrus).
+Voxels more active during visual reach compared with nonvi-
+sual reach are overlaid in light blue (Fig. 4b), showing that only
+areas located more posteriorly, at the parieto-occipital junction
+(sPOS), are modulated by vision during reaching.
+Figure 4c shows a conjunction between activations for all three
+conditions, i.e., voxels activated significantly by visual reaching,
+nonvisual reaching, and saccades, at p  0.05 (pale yellow) and
+p  0.01 (red). This figure shows that as the threshold is raised,
+the medial activation (aPCu) becomes disconnected from the
+more dorsal mIPS activation, suggesting that although coacti-
+vated in the conjunction mask in Figure 4a, these could be two
+functionally distinct areas.
+Our results thus show that (1) the precuneus has functionally
+distinct subregions. Specifically, the anterior precuneus is not
+modulated by sight of the hand during reaching, suggesting pro-
+prioceptive input, whereas the sPOS is modulated by sight of the
+hand; (2) the anterior precuneus is coactivated with medial IPS,
+although the two areas become disconnected at higher thresh-
+olds, implying some functional separation; and (3) as seen in
+Figure 4b, there is a gradual transition in functional characteris-
+tics from anterior to posterior parts of the posterior parietal lob-
+ule. This transition is from (i) reach-only areas (in green), which
+do not respond to saccades, in the very anterior parts of the
+posterior parietal lobule and at the posterior end of the cingulate
+sulcus, to (ii) both-reach-and-saccade areas (in yellow) inmedial
+IPS and anterior precuneus, which respond more strongly and
+equally to both reaches compared with saccades, showing no vi-
+sualmodulation, to (iii)more posterior reach areasmodulated by
+vision of the hand and saccades (in blue, sPOS).
+Thus, whereas previous fMRI studies in humans have labeled
+various parts of the precuneus “human PRR,” our current anal-
+ysis shows that in fact the anterior part of the precuneus responds
+equally during visual and nonvisual reaches, and more weakly
+during saccades, as does medial IPS. In contrast, the more poste-
+rior sPOS area is modulated by vision of the hand during the
+reach. Our results thus argue for multiple parietal reach regions,
+with different roles in visual as opposed to proprioceptively
+guided reaching, rather than a “single parietal reach region.”
+Figure 5 shows contrast activations for visual reach versus
+saccade, nonvisual reach versus saccade, and visual versus nonvi-
+sual reach ( p 0.0001, corrected) from three representative sub-
+jects. Every subject showed significantly greater activation in
+aPCu for visual and nonvisual reaching compared with saccades,
+bilaterally. Figure 5 also shows greater sPOS activation for visual
+versus nonvisual reaching; this pattern was true in all but one
+subject.
+Supplemental data from a separate experiment on imagined,
+observed, and executed visual reaching (see supplemental Fig. S1,
+available at www.jneurosci.org as supplemental material) show
+that both sPOS and aPCu are activated by reaching imagery
+alone, when no visual feedback or somatosensory input from the
+hand are available. Thus, sPOS and aPCu are not purely visual or
+purely somatosensory, respectively.
+We also performed two additional experiments. In the first
+experiment, subjects saccaded or reached to visual targets dis-
+played around the fixation cross in both the lower and upper
+visual field, with the hand in sight (see supplemental Fig. S2,
+available at www.jneurosci.org as supplemental material). In the
+second experiment, subjects saw the same visual targets as in the
+first additional experiment, except that reaching was performed
+out of sight on a hidden plate to the right of the subject, with no
+visual feedback from the hand (see supplemental Fig. S3, avail-
+Table 1. AverageMNI-space coordinates (in millimeters) for peak activations in the aPCu and superior POS regions of interest
+Contrast ROI x y z No. of subjects
+Vis. reach saccade Left aPCu 9 1.7 54  3.1 60  1.2 7
+Right aPCu 11 0.9 54  2.4 58  2.1 7
+Non-vis. reach saccade Left aPCu 11 1.3 58  3.0 61  1.8 7
+Right aPCu 12 1.2 57  2.6 60  1.8 7
+Vis. reach non-vis. reach Left sPOS 9 1.9 77  2.1 46  1.7 6
+Right sPOS 13 1.7 78  1.7 45  2.8 7
+The SEM () is indicated to the right of each x, y, and z coordinate. One of the eight subjects had anomalous (30 mm different) MNI coordinates and was thus excluded. All activations were at p 0.001 (corrected).
+4
+Figure 3. Contrasts between activations for visual direct reaching and saccades, nonvisual
+direct reaching and saccades, and visual and nonvisual direct reaching. A, Contrast activations.
+Red to yellow indicates greater activation for the condition subtracted from; blue to light blue
+indicates greater activation for the subtracted condition. Both kinds of reaching activate the
+aPCu more than saccades. Note the lack of difference between visual and nonvisual direct
+reaching in aPCu, circled in green (bottom row,medial view). The superior POS is indicatedwith
+a black arrow and a purple-blue circle. Note the increased activation for visual direct reaching
+compared with nonvisual direct reaching in the sPOS region. B, Percent signal change time
+course (left) and magnitude (right) in left aPCu for visual direct reaching, nonvisual direct
+reaching, and saccades, compared with baseline. Visual and nonvisual direct reaching activa-
+tions are not significantly different in aPCu and exhibit a similar time course. Both kinds of
+reaching were significantly different from saccades in left aPCu ( p 0.05, corrected). C, Per-
+cent signal change time course (left) and magnitude (right) in the left superior POS for visual
+and nonvisual reaching, and saccades. Visual reaching activates the sPOS more than either
+nonvisual reaching ( p 0.01) or saccades ( p 0.004). Error bars inB and C indicate the SEM.
+Bar graphs on the right represent the sum of percent signal change values at each time point
+shown in the curves on the left, i.e., over 0–6 TRs. Activations to the left of graphs show visual
+direct reach versus baseline ( p 0.001, corrected). cing. sulc., Cingulate sulcus; CS, central
+sulcus; L, left; R, right; vis., visual.
+Filimon et al. • Visual and Proprioceptive Reaching Representations J. Neurosci., March 4, 2009 • 29(9):2961–2971 • 2967
+able at www.jneurosci.org as supplemental
+material). Saccades were executed as in the
+first experiment. Both experiments show
+the same patterns of activation in the an-
+terior precuneus and sPOS as reported
+here.
+Discussion
+We sought to identify sources of sensory
+input to human medial parietal reach re-
+gions during direct, immediately executed
+reaches that were either visible or invisible
+to subjects. We also compared visual and
+nonvisual direct reaching with saccades.
+Results show that an aPCu reach-
+dominant region was activated equally
+with or without visual feedback from the
+reaching hand. aPCu was coactivated with
+medial IPS, and responded more to visual
+and nonvisual reaches than to saccades.
+This suggests a proprioceptive input from
+the moving arm in aPCu during the reach
+transport phase. A second, more posterior
+area at the superior POS responded more
+during visual than nonvisual reaches or
+saccades. sPOS may process visual feed-
+back from the hand during on-line reach-
+ing ormay calculate the visual distance be-
+tween an effector and the target.
+Area aPCu
+Visual and nonvisual reaching activated
+aPCu equally. Reach-related activations
+were stronger in contralateral (left) aPCu,
+supporting a role for proprioception. This
+is consistent with left parietal damage def-
+icits, e.g., optic ataxia and contralateral
+proprioceptive impairments (Perenin and
+Vighetto, 1988; Wolpert et al., 1998).
+We always presented targets visually
+while manipulating the visual presence of
+Figure 4. Conjunction analyses of group activations for visual reaching (VR), nonvisual reaching (NVR), and saccades (SAC). A,
+Conjunction mask showing all the voxels (yellow) that participate in visual and nonvisual reaching as well as saccades, but more
+strongly in both reaches comparedwith saccades, and equally in both reaches. The left inflated hemisphere is shown. Only voxels
+are shown that satisfy all of the following conditions: (1) are significantly activated ( p 0.05) by each of the following: visual
+reach, nonvisual reach, and saccade compared with baseline; (2) are activated significantly more strongly ( p 0.05) by visual
+reach than saccade andbynonvisual reach than saccade; and (3) are activated equally strongly by visual reach andnonvisual reach
+(visual reach nonvisual reach 0, n.s.). Voxels that satisfy these requirements are found in the anterior precuneus (see green
+circle and arrows), as well as an area in medial intraparietal sulcus that extends dorsally, dorsal premotor cortex, and SMA. The
+circled area overlaps with the anterior precuneus activations shown in Figures 2 and 3. B, Overlay of multiple masks. Yellow,
+Conjunctionmask fromA. Green,All voxels that are significantly active inbothvisual andnonvisual reaches ( p0.05)but arenot
+significantly activated by saccades (n.s.). Blue, All voxels significantly ( p 0.05) more active in visual reach compared with
+nonvisual reach. Note themore anterior distribution of voxels exclusively activated by either kind of reaching (green), and not by
+4
+saccades, in parietal cortex; medial view shows that those
+activations fall mostly within the posterior cingulate sulcus.
+The small purple-blue circle shows that the superior POS is
+significantly more active during visual reaches than during
+nonvisual reaches. C, Conjunction between all three condi-
+tions: voxels significantly activated by visual reaches, nonvi-
+sual reaches, and saccades, compared with baseline, are
+shownatp0.05 (pale yellow)and, overlaid, atp0.01 (in
+red). Note that this is a highly stringent test as voxels have to
+be active at p 0.01 in each condition versus baseline, as
+well as be active in all three conditions versus baseline. At
+higher thresholds, themedial (anterior precuneus) activation
+is becoming disconnected from the medial IPS and superior
+parietal cluster (see green arrows). The small purple-blue cir-
+cle shows that the superior POS is significantly activated by all
+three conditions compared with baseline. All contrasts were
+performed voxelwise at the whole-brain level, with surface-
+based clustering used for multiple-comparison correction
+(minimum cluster of 5  5 contiguous voxels). Note that
+“and” means the logical AND operator. CS, Central sulcus;
+cing. sulc., cingulate sulcus.
+2968 • J. Neurosci., March 4, 2009 • 29(9):2961–2971 Filimon et al. • Visual and Proprioceptive Reaching Representations
+the hand. Common visual and nonvisual reaching activation in
+aPCu could partly be due to targets, rather than proprioceptive
+feedback. However, Pellijeff et al. (2006) found that eyes-closed
+reaching to nonvisual targets also activated aPCu. Subjects
+reached to point to the contralateral thumb or chin, with start
+and end points varying. aPCu activations were greater during the
+first reach following a postural change (in starting hand location
+or target location) than in subsequent reaches. Activations by
+postural changes without visual input strongly support proprio-
+ceptive inputs to aPCu. Non-spatially directed arm movements
+with eyes closed also show contralateral aPCu activation (Fili-
+mon, 2008). Thus, aPCu is activated without visual input. Inter-
+estingly, passive vibrotactile hand stimulation activates the pre-
+cuneus (Beauchamp et al., 2007), perhaps by also stimulating
+muscle receptors.
+Is aPCu purely somatosensory and not motor at all? Supple-
+mental Figure S1 (available at www.jneurosci.org as supplemen-
+tal material) shows strong aPCu activations during imagined
+reaches in the absence of proprioceptive input (see also Filimon
+et al., 2007). Imagined reaching did not activate S1, M1, or V1,
+suggesting that aPCu activations reflect motor preparation. This
+is consistent with previous studies showing hand movement
+planning without proprioceptive feedback activates aPCu
+(Astafiev et al., 2003).
+Passive observation of reaching can also activate aPCu (Fili-
+mon et al., 2007). However, precuneus activations for both ob-
+servation and imagery are weaker than for actual movement,
+suggesting that proprioception is important. aPCu activations
+also tended to be greater duringmotor imagery than observation,
+supporting amotor role. aPCumay havemultiple populations of
+neurons, some visuomotor and some proprioceptive–motor.
+Nevertheless, our demonstration of equal aPCu activation for
+visual and nonvisual reaching suggests a dominant propriocep-
+tive–motor representation.
+The nomenclature ofmedial parietal cortex is not settled. Hu-
+man aPCu, and possiblymIPS,may correspond tomacaque PRR,
+which comprises parts of MIP and extends medially (Snyder et
+al., 1997; Andersen and Buneo, 2002), consistent with the present
+mIPS and aPCu coactivation. Alternatively, aPCu may represent
+macaque PEc. PEc is anterior to the POS and V6A, and responds
+during both passive joint rotations and reaching movements,
+supporting a role in proprioceptively directed reaching (Breveg-
+lieri et al., 2006). Human cytoarchitectonic research has identi-
+fied anterior–posterior precuneus divisions resembling the
+present functional distinctions, proposing the terminology 7A
+and 7P/7M (Scheperjans et al., 2008).
+Note that our aPCu activations are more dorsal than the pre-
+cuneus activations frequently considered part of the “default net-
+work”, which are frequently located on the inferior precuneus
+wall (Raichle and Snyder, 2007). Our results show that at least
+parts of the precuneus are actively involved in motor tasks, in-
+stead of being part of the “resting-state network.” This is consis-
+tent with previously reported coordinates for hand movement
+activations [e.g., Connolly et al. (2003) and Hagler et al. (2007)].
+Superior POS
+More posteriorly located sPOS could represent both the location
+of the visual target relative to the visuomotor trajectory, and the
+visual distance from the hand or eye to the target. sPOS activa-
+tionswere stronger for visual reaching thannonvisual reaching or
+saccades, suggesting that sPOS is involved in visually monitoring
+how far the limb is from the target. However, nonvisual reaching
+also activated sPOS. This suggests the retinal target location is
+also represented in sPOS. Prado et al. (2005) found parieto-
+occipital junction activations during nonvisual reaching to pe-
+ripheral (as in the present study), not central, targets. The greater
+activation in sPOS with a visible hand supports a role in compar-
+ing the retinal locations of the hand and target.
+Additional data (supplemental Fig. S1, available at www.
+jneurosci.org as supplemental material) show that sPOS has mo-
+tor, not purely visual, properties (Filimon et al., 2007). Left sPOS
+responds strongly during imagined right-handed reaches, in the
+absence of visual input from the hand. Visual cortex, in contrast,
+is not activated relative to baseline, suggesting that sPOS activa-
+tion is not due to visual imagery of a moving hand. Instead, the
+left sPOS activation indicates motor planning. It responds ro-
+bustly during imagined and executed reaches, but more weakly
+during passive observation of a moving right hand. Thus, left
+sPOS seems to play a visuomotor, not just visual, role in reaching.
+Pointing studies have revealed similar sPOS activations (Con-
+Figure 5. Individual data for visual direct reaching versus saccades, nonvisual direct reaching versus saccades, and visual versus nonvisual direct reaching. Differences in BOLD responses for the
+three conditions from three individual subjects. All subjects exhibited greater activations for either type of reach comparedwith saccades in aPCu (circled in green). Subjects showed variability in the
+location and amount of superior POS activation in the visual direct versus nonvisual direct reach comparison (see arrows and small purple-blue circles). Visual direct reaching comparedwith saccades
+(top row) activated the sPOS region more than nonvisual direct reaching compared with saccades (middle row) in seven of eight subjects. L, Left; R, right; vis., visual.
+Filimon et al. • Visual and Proprioceptive Reaching Representations J. Neurosci., March 4, 2009 • 29(9):2961–2971 • 2969
+nolly et al., 2003). The sPOS may plan pointing movements by
+visual target location and visually perceived, rather than actual,
+movement direction (Fernandez-Ruiz et al., 2007). The sPOSwas
+active when visually perceived pointing movements matched vi-
+sual target locations, not muscle activations [e.g., when reversing
+prismsmade leftwardmovements appear rightward (Fernandez-
+Ruiz et al., 2007)], suggesting that sPOS encodes targets and
+movement plans in eye-centered coordinates. Also, sPOS prefers
+visual targets that can be acted on in near-space versus far-away
+targets (Quinlan and Culham, 2007; Culham et al., 2008), sug-
+gesting that sPOS contains visuomotor representations for
+action.
+sPOS may be homologous to macaque V6A, where neurons
+are modulated by visual feedback during reaching (Fattori et al.,
+2001).
+Reaching versus pointing
+Filimon (2008) found stronger precuneus activations for arm
+versus fingermovements; finger activations were shifted laterally.
+Finger pointing may not realistically approximate the reaching
+tasks used with macaques; thus, pointing-defined “PRRs” may
+differ from true (arm) parietal reach regions. Some pointing
+studies have labeled sPOS activations as PRR (Fernandez-Ruiz et
+al., 2007).Our greater aPCu activations for actual reaching versus
+saccades are consistent with studies that involved wrist (Astafiev
+et al., 2003) or forearm (Levy et al., 2007) movements. In con-
+trast, studies of index finger movements found no aPCu activa-
+tion differences between pointing and saccades (Hagler et al.,
+2007).
+Other regions
+Although we focused on the differential contributions of aPCu
+and sPOS to reaching versus saccades, additional parietal and
+frontal areas were also activated, consistent with previous reports
+on reaching (Filimon et al., 2007), reaching to grasp (Grafton et
+al., 1996; Culham et al., 2003), reaching to point or touch (Pelli-
+jeff et al., 2006; Levy et al., 2007), pointing (Connolly et al., 2000,
+2003; Simon et al., 2002; Astafiev et al., 2003, 2004; Mendendorp
+et al., 2003; Fernandez-Ruiz et al., 2007; Hagler et al., 2007), and
+saccades (Culham et al., 1998; Connolly et al., 2000; Sereno et al.,
+2001; Koyama et al., 2004, Simon et al., 2002).
+Posterior parietal regions more active for reaching than sac-
+cades included anterior IPS/supramarginal gyrus. These regions
+may represent human homologs of macaque AIP (Culham et al.,
+2003, 2006) and area 7b (Culham and Kanwisher, 2001), and
+were likely activated by hand-related rather than arm-related sen-
+sory stimulation during movement. Human homologs for ma-
+caque arm-movement areas have been proposed in medial pari-
+etal areas, however, which were the focus of the present study.
+Medial IPS was also coactivated with aPCu. It is possible that
+mIPS and aPCu form a functional unit. Other areas, e.g., the
+postcentral sulcus and the anterior superior parietal gyrus, likely
+correspond to macaque area 5. Our results show a gradual
+proprioceptive-to-visual transition from anterior to posterior
+parts of the posterior parietal lobule, from reach-only areas that
+do not respond to saccades in the very anterior parts of the pos-
+terior parietal lobule and at the posterior end of the cingulate
+sulcus, to both-reach-and-saccade areas in medial IPS and ante-
+rior precuneus, to more posterior reach areas modulated by vi-
+sion of the hand and saccades (sPOS). This implies that even
+more functional subdivisions exist, supporting a network ofmul-
+tiple reach regions in humans.
+aPCu and attention
+Attention also activates the human precuneus (Beauchamp et al.,
+2001), consistent with attentional modulation in macaque pari-
+etal cortex (e.g., V6A, Galletti et al., 2003). However, attention is
+an unlikely explanation for our aPCu reaching activations. Co-
+vert (non-eye movement) attentional shifts activate the precu-
+neus less than either saccades or pointing (Beauchamp et al.,
+2001; Astafiev et al., 2003). Here, overt saccades activated aPCu
+significantly less than reaching; thus, covert attention should ac-
+tivate aPCu even less. Finally, in additional tests we found that
+continuous arm, but not continuous finger or hand-only move-
+ments, activate aPCu with eyes closed, again ruling out greater
+attention to a continuously moving limb as the source of aPCu
+activation. Thus, the aPCu activations found here most likely
+reflect arm-movement execution rather than nonspecific spatial
+attention.
+The term “parietal reach region” has been used loosely in the
+literature, with areas from the sPOS to the posterior cingulate
+sulcus all termed “PRR.” Our results suggest that multiple, func-
+tionally distinct posterior parietal subregions participate in dif-
+ferent aspects of reaching in humans.
+References
+Andersen RA, Buneo CA (2002) Intentional maps in posterior parietal cor-
+tex. Annu Rev Neurosci 25:189–220.
+Astafiev SV, ShulmanGL, StanleyCM, SnyderAZ,VanEssenDC,CorbettaM
+(2003) Functional organization of human intraparietal and frontal cor-
+tex for attending, looking, and pointing. J Neurosci 23:4689–4699.
+Astafiev SV, Stanley CM, ShulmanGL, CorbettaM (2004) Extrastriate body
+area in human occipital cortex responds to the performance of motor
+actions. Nat Neurosci 7:542–548.
+BeauchampMS, Petit L, Ellmore TM, Ingeholm J, Haxby JV (2001) A para-
+metric fMRI study of overt and covert shifts of visuospatial attention.
+Neuroimage 14:310–321.
+BeauchampMS, YasarNE, KishanN, RoT (2007) HumanMSTbut notMT
+responds to tactile stimulation. J Neurosci 27:8261–8267.
+Breveglieri R, Galletti C, Gamberini M, Passarelli L, Fattori P (2006) So-
+matosensory cells in area PEc ofmacaque posterior parietal cortex. J Neu-
+rosci 26:3679–3684.
+Cavada C (2001) The visual parietal areas in the macaque monkey: current
+structural knowledge and ignorance. Neuroimage 14:S21–S26.
+Connolly JD, Goodale MA, Desouza JFX, Menon RS, Vilis T (2000) A com-
+parison of frontoparietal fMRI activation during anti-saccades and anti-
+pointing. J Neurophysiol 84:1645–1655.
+Connolly JD, Andersen RA, Goodale MA (2003) fMRI evidence for a ‘pari-
+etal reach region’ in the human brain. Exp Brain Res 153:140–145.
+Cox RW (1996) AFNI: software for analysis and visualization of functional
+magnetic neuroimages. Comput Biomed Res 29:162–173.
+Culham JC, Kanwisher NG (2001) Neuroimaging of cognitive functions in
+human parietal cortex. Curr Opin Neurobiol 11:157–163.
+Culham JC, Valyear KF (2006) Human parietal cortex in action. Curr Opin
+Neurobiol 16:205–212.
+Culham JC, Brandt SA, Cavanagh P, Kanwisher NG, Dale AM, Tootell RB
+(1998) Cortical fMRI activation produced by attentive tracking of mov-
+ing targets. J Neurophysiol 80:2657–2670.
+Culham JC, Danckert SL, DeSouza JFX, Gati JS, Menon RS, Goodale MA
+(2003) Visually guided grasping produces fMRI activation in dorsal but
+not ventral stream areas. Exp Brain Res 153:180–189.
+Culham JC, Cavina-Pratesi C, Singhal A (2006) The role of parietal cortex in
+visuomotor control: what have we learned from neuroimaging? Neuro-
+psychologia 44:2668–2684.
+Culham JC, Gallivan J, Cavina-Pratesi C, Quinlan DJ (2008) fMRI investi-
+gations of reaching and ego space in human superior parieto-occipital
+cortex. In: Embodiment, ego-space and action (KlatzkyRL, BehrmannM,
+MacWhinney B, eds), pp 247–274. New York: Psychology.
+Dale AM, Fischl B, Sereno MI (1999) Cortical surface-based analysis I: seg-
+mentation and surface reconstruction. Neuroimage 9:179–194.
+Fattori P, GamberiniM,KutzDF,Galletti C (2001) ‘Arm-reaching’ neurons
+2970 • J. Neurosci., March 4, 2009 • 29(9):2961–2971 Filimon et al. • Visual and Proprioceptive Reaching Representations
+in the parietal area V6A of the macaque monkey. Eur J Neurosci
+13:2309–2313.
+Fernandez-Ruiz J, Goltz HC, DeSouza JFX, Vilis T, Crawford JD (2007)
+Human parietal “reach region” primarily encodes extrinsic visual direc-
+tion, not extrinsic movement direction, in a visual-motor dissociation
+task. Cereb Cortex 17:2283–2292.
+Filimon F (2008) Non-spatial posterior parietal activations for finger, hand,
+and arm movements in humans. Soc Neurosci Abstr 34:854.16.
+Filimon F, Nelson JD, Hagler DJ, Sereno MI (2007) Human cortical repre-
+sentations for reaching: mirror neurons for execution, observation, and
+imagery. Neuroimage 37:1315–1328.
+Fischl B, Sereno MI, Dale AM (1999a) Cortical surface-based analysis II:
+inflation, flattening, and a surface-based coordinate system. Neuroimage
+9:195–207.
+Fischl B, Sereno MI, Tootell RB, Dale AM (1999b) High-resolution inter-
+subject averaging and a coordinate system for the cortical surface. Hum
+Brain Mapp 8:272–284.
+Galletti C, KutzDF,GamberiniM, Breveglieri R, Fattori P (2003) Role of the
+medial parieto-occipital cortex in the control of reaching and grasping
+movements. Exp Brain Res 153:158–170.
+Grafton ST, Fagg AH, Woods RP, Arbib MA (1996) Functional anatomy of
+pointing and grasping in humans. Cereb Cortex 6:226–237.
+Hagler DJ Jr, Saygin AP, Sereno MI (2006) Smoothing and cluster thresh-
+olding for cortical surface-based group analysis of fMRI data. Neuroim-
+age 33:1093–1103.
+Hagler DJ Jr, Riecke L, Sereno MI (2007) Parietal and superior frontal
+visuospatial maps activated by pointing and saccades. Neuroimage
+35:1562–1577.
+HuangRS, SerenoMI (2008) Visual stimulus presentation using fiber optics
+in the MRI scanner. J Neurosci Methods 169:76–83.
+Kalaska JF (1996) Parietal cortex area 5 and visuomotor behavior. Can
+J Physiol Pharmacol 74:483–498.
+KoyamaM,Hasegawa I, Osada T, Adachi Y, Nakahara K,Miyashita Y (2004)
+Functional magnetic resonance imaging of macaque monkeys perform-
+ing visually guided saccade tasks: comparison of cortical eye fields with
+humans. Neuron 41:795–807.
+Levy I, SchluppeckD,HeegerDJ, Glimcher PW (2007) Specificity of human
+cortical areas for reaches and saccades. J Neurosci 27:4687–4696.
+MedendorpWP, Goltz HC, Vilis T, Crawford JD (2003) Gaze-centered up-
+dating of visual space in human parietal cortex. J Neurosci 23:6209–6214.
+Pellijeff A, Bonilha L, Morgan PS, McKenzie K, Jackson SR (2006) Parietal
+updating of limbposture: an event-related fMRI study.Neuropsychologia
+44:2685–2690.
+Perenin MT, Vighetto A (1988) Optic ataxia: a specific disruption in visuo-
+motormechanisms. Different aspects of the deficit in reaching for objects.
+Brain 111:643–674.
+Prado J, Clavagnier S, Otzenberger H, Scheiber C, Kennedy H, Perenin MT
+(2005) Two cortical systems for reaching in central and peripheral vision.
+Neuron 48:849–858.
+QuinlanDJ, Culham JC (2007) fMRI reveals a preference for near viewing in
+the human parieto-occipital cortex. Neuroimage 36:167–187.
+Raichle ME, Snyder AZ (2007) A default mode of brain function: a brief
+history of an evolving idea. Neuroimage 37:1083–1090; discussion
+1097–1099.
+Scheperjans F, Eickhoff SB, Ho¨mke L, Mohlberg H, Hermann K, Amunts K,
+Zilles K (2008) Probabilistic maps, morphometry, and variability of cy-
+toarchitectonic areas in the human superior parietal cortex. Cereb Cortex
+18:2141–2157.
+Sereno MI, Pitzalis S, Martinez A (2001) Mapping of contralateral space in
+retinotopic coordinates by a parietal cortical area in humans. Science
+294:1350–1354.
+Simon O, Mangin JF, Cohen L, Le Bihan D, Dehaene S (2002) Topograph-
+ical layout of hand, eye, calculation, and language-related areas in the
+human parietal lobe. Neuron 33:475–487.
+Snyder LH, Batista AP, Andersen RA (1997) Coding of intention in the
+posterior parietal cortex. Nature 386:167–170.
+Ward BD (2000) Deconvolution analysis of fMRI time series data. AFNI
+3dDeconvolve documentation, Medical College of Wisconsin.
+Wolpert DM, Goodbody SJ, Husain M (1998) Maintaining internal repre-
+sentations: the role of the human superior parietal lobe. Nat Neurosci
+1:529–533.
+Filimon et al. • Visual and Proprioceptive Reaching Representations J. Neurosci., March 4, 2009 • 29(9):2961–2971 • 2971

@@ -1,33 +1,48 @@
 from openai import OpenAI, api_key
-from texts import job
-import prompt
+from . import prompt
+from .secret import API_KEY #create a python file called secret.py and add ur own API key
+import requests
+
+import base64
+import os
+
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
 
 
-client = OpenAI(
-    api_key="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"
-)
-
-def getGPTresponse(api_key, file_path, persona="Peter Griffin"):
+def getGPTresponse(persona="Peter Griffin"):
     # Construct the prompt
-    prompt = prompt.basic
+    client = OpenAI(api_key = API_KEY)
 
-    data = {
-        "model": "gpt-4-turbo",
-        "messages": [{"role": "system", "content": persona},
-                     {"role": "user", "content": prompt}],
-        "max_tokens": 1000  # Adjust based on your needs
-    }
+    user_prompt = []
+    user_prompt.append({'type': 'text', 'text' : prompt.basic_prompt})
+    for file in os.listdir():
+        if file.endswith('.png'):
+            continue #he may not be supposed to view these images
+            user_prompt.append(
+                {
+                "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64,{encode_image(file)}"
+                    }
+                } 
+            )    
+        elif file == 'extract.txt':
+            with open(file, "r") as file:
+                text = file.read()
 
-    # Upload the file and make the request
-    files = {'file': open(file_path, 'rb')}
-    response = requests.post(url, headers=headers, json=data, files=files)
+                user_prompt.append({'type': 'text', 'text' : text})
+        
 
-    if response.status_code == 200:
-        result = response.json()
-        summary_text = result["choices"][0]["message"]["content"]
 
-        key_terms = []
+    completion = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "developer", "content": persona},
+        {"role": "user", "content": user_prompt
+        }
+    ]
+    )
 
-        return summary_text, key_terms
-    else:
-        return f"Error: {response.status_code} - {response.text}", []
+    return completion.choices[0].message.content
